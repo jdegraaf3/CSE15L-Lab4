@@ -37,7 +37,7 @@ Example 2:
 ```
 
 ## grep pattern$ filename
-This command prints every line that contains the pattern at the end of the line. This command could be useful if you are looking for certain properties within a file, say if it is code, you could find all the lines that are statements in java with "grep ;$ filename".
+"$" means end of line/last in linux, so this command prints every line that contains the pattern at the end of the line. This command could be useful if you are looking for certain properties within a file, say if it is code, you could find all the lines that are statements in java with "grep ;$ filename". 
 
 Example 1:
 ```
@@ -46,6 +46,7 @@ Example 1:
         activity in the systemic circulation. However, those
         synthase; PBS = phosphate-buffered saline; PCR = polymerase
 ```
+The pattern se$ meanse we want to find all linds of the file that have "se" at the end of them. So in our example we found three. Notice "se" has to be the last thing of each line, say even if there were a line like "house." within the file this wouldn't be found in our grep search because we did not include the period within the pattern. Vice versa, if we were to include the period within our search, none of the three lines found in example on would be returned.
 Example 2:
 ```
 [cs15lsp23jy@ieng6-201]:biomed:345$ grep ing$ rr74.txt
@@ -63,7 +64,7 @@ Example 2:
         In rat lungs, nNOS expression was increased following
 ```
 ## grep -l pattern *
-This command prints every file within a directory that contains the given pattern. This command would be especially useful in finding files of topics that you want to explore within a large directory.
+In linux "-l" means files with match, so this command prints every file within a directory that contains the given pattern. This command would be especially useful in finding files of topics that you want to explore within a large directory.
 
 Example 1:
 ```
